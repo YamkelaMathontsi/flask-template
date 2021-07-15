@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Learning Templates</title>
+    <style>
+    </style>
+</head>
+<body>
+<p><img src="{{url_for('static', filename='blackgle.jpg')}}"></p>
+<h1>Hi {{name}},Hows the lessons </h1>
+
+{%if name== "Yamkela" :%}
+<h3>You are the admin.</h3>
+{%else%}
+<p>You are a normal user</p>
+{%endif %}
+
+<table>
+        <thead>
+            <tr>
+                <th>Name </th>
+                <th> Age</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for key in students %}
+                <tr>
+                    <td>{{key}}</td>
+                    <td>{{students [key]}}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
+
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <title>Learning Templates</title>-->
+<!--</head>-->
+<!--<body>-->
+<!--<p><img src="{{url_for('static', filename='Skyline.jpg')}}" /> </p>-->
+<!--<h1>Hi {{name}}, how are you finding the flask lesson?</h1>-->
+
+<!--{%if name == 'Devin':%}-->
+<!--<p>You are the admin</p>-->
+<!--{%else%}-->
+<!--<p>You are a normal user</p>-->
+<!--{%endif %}-->
+
+<!--    <table>-->
+<!--        <thead>-->
+<!--            <tr>-->
+<!--                <th>Name</th>-->
+<!--                <th>Age</th>-->
+<!--            </tr>-->
+<!--        </thead>-->
+<!--        <tbody>-->
+<!--            {% for key in student_ages %}-->
+<!--                <tr>-->
+<!--                    <td>{{key}}</td>-->
+<!--                    <td>{{student_ages[key]}}</td>-->
+<!--                </tr>-->
+<!--            {% endfor %}-->
+<!--        </tbody>-->
+<!--    </table>-->
+
+<!--</body>-->
+</html>

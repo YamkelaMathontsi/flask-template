@@ -1,0 +1,14 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Numbers</title>
+</head>
+<body style="background:tan">
+<h1>Multiplication table</h1>
+{% for i in range(1, 11) %}
+        <p style="border: 2px solid black; font-size:2rem; width:50vw; text-align:center">{{ number }} * {{ i }} = {{ number * i }}</p>
+    {% endfor %}
+</body>
+</html>
